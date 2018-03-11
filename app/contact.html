@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/app.min.js"></script>
+</head>
+<body>
+
+<div class="uk-offcanvas-content ">
+    <div class="uk-section-primary uk-preserve-color">
+        <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
+            <nav class="uk-navbar-container navbar-shadow">
+                <div class="uk-container">
+                    <div class="uk-container uk-container-expand ">
+                        <div uk-navbar>
+                            <div class="nav-overlay uk-navbar-left">
+                                <a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-reveal">
+                                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                                </a>
+                                <ul class="uk-navbar-nav uk-visible@m">
+                                    <li class="uk-active">
+                                        <a href="#"><span class="uk-margin-small-right" uk-icon="icon: user"></span>Account</a>
+                                        <div class="uk-navbar-dropdown">
+                                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: bookmark"></span> Saved News</a></li>
+                                                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: location"></span> Location</a></li>
+                                                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: bell"></span> Notifications</a></li>
+                                                <li class="uk-nav-divider"></li>
+                                                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: forward"></span> Sign out</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span>About Us</a>
+                                    </li>
+                                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: reply"></span>Contacts</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-overlay uk-navbar-right">
+                                <ul class="uk-navbar-nav">
+                                    <li>
+                                        <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="uk-margin-small-right flag-icon flag-icon-am"></span> Armenian</a>
+                                        <div class="uk-navbar-dropdown drop-languages">
+                                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                <li><a href="#"><span class="uk-margin-small-right flag-icon flag-icon-ru"></span> Russian</a></li>
+                                                <li><a href="#"><span class="uk-margin-small-right flag-icon flag-icon-gb"></span> English</a></li>
+                                                <li><a href="#"><span class="uk-margin-small-right flag-icon flag-icon-ua"></span> Ukrainian</a></li>
+                                                <li><a href="#"><span class="uk-margin-small-right flag-icon flag-icon-ge"></span> Georgian</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+                                <div class="uk-navbar-item uk-width-expand">
+                                    <form class="uk-search uk-search-navbar uk-width-1-1">
+                                        <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                                    </form>
+                                </div>
+                                <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+                                <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-height-medium uk-background-cover uk-light uk-flex" uk-parallax="bgy: -50" style="background-image: url('./images/marguerite-daisy-beautiful-beaut.jpg');">
+
+        <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-filter; blur: 0,10;">Contact Us</h1>
+
+    </div>
+    <div class="uk-container main-content">
+
+
+        <div uk-grid>
+            <div class="uk-width-3-4@s">
+                <form>
+                    <fieldset class="uk-fieldset">
+
+                        <legend class="uk-legend">Send message</legend>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="name">Your name</label>
+                            <input class="uk-input" id="name" type="text" placeholder="Please enter your name">
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="subject">Subject</label>
+                            <input class="uk-input" id="subject" type="text" placeholder="Please enter message subject">
+                        </div>
+
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="message">Message</label>
+                            <textarea class="uk-textarea" id="message" rows="5" placeholder="Please enter your message"></textarea>
+                        </div>
+
+                        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                            <label><input class="uk-radio" type="radio" name="type" checked uk-toggle="target: #company-field"> Person</label>
+                            <label><input class="uk-radio" type="radio" name="type" uk-toggle="target: #company-field"> Company</label>
+                        </div>
+
+                        <div class="uk-margin" id="company-field" hidden>
+                            <label class="uk-form-label" for="company">Company</label>
+                            <input class="uk-input" id="company" type="text" placeholder="Please enter your company name">
+                        </div>
+
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-primary uk-width-1-4@s"><span class="uk-margin-small-right" uk-icon="icon: forward"></span> Send</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </div>
+            <div class="uk-width-1-4@s">
+                <ul class="uk-nav uk-list uk-list-divider single-news-meta">
+                    <li><span uk-icon="icon: mail"></span> info@timenews.org</li>
+                    <li><span uk-icon="icon: facebook"></span> Facebook</li>
+                    <li><span uk-icon="icon: google-plus"></span> Google Plus</li>
+                </ul>
+            </div>
+
+            <a id="js-scroll-trigger" class="uk-visible@s" href="#" uk-scroll uk-totop></a>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

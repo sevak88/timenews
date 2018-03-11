@@ -53,12 +53,43 @@ ul.social-share{
   right: 50px;
   bottom: 50px;
 }
-
 .news-list .news-item .news-thumb img{
   width: 100%;
 }
-
 div.drop-languages {
   background-color: #fff !important;
   z-index: 2;
+}
+.social-btn{
+  color:#fff;
+}
+.facebook-bg{
+  background-color: #3b5999;
+}
+.twitter-bg{
+  background-color: #55acee;
+}
+.google-plus-bg{
+  background-color: #dd4b39;
+}
+.primary-bg{
+  background-color:#1E87F0
+}
+.black-bg{
+  background-color: #222222;
+}
+.social-btn.primary-bg:hover{
+  color: #1E87F0;
+}
+.social-btn.black-bg:hover{
+  color: #222222;
+}
+.social-btn.facebook-bg:hover{
+  color: #3b5999;
+}
+.social-btn.twitter-bg:hover{
+  color: #55acee;
+}
+.social-btn.google-plus-bg:hover{
+  color: #dd4b39;
 }
