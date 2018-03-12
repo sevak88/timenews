@@ -2,7 +2,8 @@ var gulp        = require("gulp"),
     sass        = require("gulp-sass"),
     concat      = require("gulp-concat"),
     uglify      = require("gulp-uglifyjs"),
-    imagemin    = require("gulp-imagemin");
+    imagemin    = require("gulp-imagemin"),
+    htmlmin     = require('gulp-htmlmin');
 
 gulp.task("sass", function () {
     return gulp.src(["./app/app.scss"])
@@ -25,6 +26,7 @@ gulp.task("scripts", function () {
 
 gulp.task("html", function () {
     return gulp.src(["./app/*.html"])
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest("./dist"))
 });
 
