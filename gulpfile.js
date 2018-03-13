@@ -6,8 +6,10 @@ var gulp        = require("gulp"),
     htmlmin     = require('gulp-htmlmin');
 
 gulp.task("sass", function () {
-    return gulp.src(["./app/app.scss"])
-        .pipe(sass().on('error', function () {
+    return gulp.src([
+                "./app/app.scss"
+            ])
+        .pipe(sass({outputStyle: 'compressed'}).on('error', function () {
             console.log("sass compile error!!!")
         }))
         .pipe(gulp.dest("./dist/css"))
@@ -17,6 +19,7 @@ gulp.task("scripts", function () {
     return gulp.src([
                 "./app/uikit/dist/js/uikit.js",
                 "./app/uikit/dist/js/uikit-icons.js",
+                "./app/PickMeUp/dist/pickmeup.min.js",
                 "./app/app.js"
                 ])
         .pipe(concat("app.min.js"))
@@ -61,7 +64,7 @@ gulp.task("build", ["scripts", "sass", "images", "html"], function () {
 });
 
 gulp.task("watch", function () {
-   gulp.watch(["./app/app.scss"], ["sass"]);
+   gulp.watch(["./app/app.scss", "./app/calendar-theme.scss"], ["sass"]);
    gulp.watch(["./app/app.js"], ["scripts"]);
    gulp.watch(["./app/*.html"], ["html"]);
 });

@@ -12,7 +12,9 @@
 @import "./uikit/src/scss/uikit-theme.scss";
 
 //import other libs
-@import "./flag-icon-css/sass/flag-icon";
+@import "./flag-icon-css/sass/flag-icon.scss";
+@import "./PickMeUp/css/pickmeup.scss";
+@import "./calendar-theme.scss";
 
 ul.news-list li > div{
   position: relative;

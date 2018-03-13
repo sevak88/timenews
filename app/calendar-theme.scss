@@ -1,0 +1,48 @@
+$background                       : $global-primary-background;
+$border-radius                    : 0;
+$color                            : #eee;
+$background-hover                 : transparent;
+$color-hover                      : #88c5eb;
+$nav-color                        : $color;
+$nav-color-hover                  : $color-hover;
+$not-in-month                     : #666;
+$not-in-month-hover               : #eee;
+$disabled                         : #333;
+$selected                         : $color;
+$selected-background              : #17384d;
+$not-in-month-selected-background : #136a9f;
+$day-of-week                      : $not-in-month-hover;
+$today-background                 : $not-in-month-selected-background;
+$today-color                      : $color-hover;
+$calendar-width                   : 100%;
+$day-width                        : $calendar-width  / 7 ;
+
+
+
+.pickmeup {
+  background: $background;
+  border-radius   : $border-radius;
+  .pmu-instance {
+    width: $calendar-width;
+    .pmu-day-of-week {
+      color  : $day-of-week;
+    }
+    .pmu-day-of-week,
+    .pmu-days {
+      * {
+        width       : $day-width;
+      }
+    }
+    .pmu-today {
+      background : $today-background;
+      color      : $today-color;
+    }
+    .pmu-selected {
+      background : $selected-background;
+      color      : $selected;
+    }
+  }
+  .pmu-instance:first-child:last-child .pmu-month {
+    width : $calendar-width;
+  }
+}
