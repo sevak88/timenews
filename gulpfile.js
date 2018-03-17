@@ -7,7 +7,7 @@ var gulp        = require("gulp"),
 
 gulp.task("sass", function () {
     return gulp.src([
-                "./app/app.scss"
+                "./app/scss/app.scss"
             ])
         .pipe(sass({outputStyle: 'compressed'}).on('error', function () {
             console.log("sass compile error!!!")
@@ -48,7 +48,7 @@ gulp.task("images", function () {
 
         ]))
         .pipe(gulp.dest("./dist/images"))
-})
+});
 
 gulp.task("build", ["scripts", "sass", "images", "html"], function () {
     var buildFlags = gulp.src(["./app/flag-icon-css/flags/**/*.svg"])
