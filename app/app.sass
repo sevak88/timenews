@@ -1,0 +1,94 @@
+// 1. Your custom variables and variable overwrites.
+//$global-link-color: #DA7D02;
+
+// 2. Import default variables and available mixins.
+@import "./uikit/src/scss/variables-theme.scss"
+@import "./uikit/src/scss/mixins-theme.scss"
+
+// 3. Your custom mixin overwrites.
+//@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "./uikit/src/scss/uikit-theme.scss"
+
+//import other libs
+@import "./flag-icon-css/sass/flag-icon.scss"
+
+ul.news-list li > div
+  position: relative
+
+ul.social-share
+  padding: 0
+.news-list .news-item img
+  margin-bottom: 0
+
+.property-card-list
+  height: 165px
+
+.news-list .news-item .news-body
+  position: relative
+
+.news-title
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+.uk-grid .news-meta-info
+  height: 25px
+  margin-top: 0
+
+.main-content
+  margin-top: 30px
+  margin-bottom: 30px
+
+
+.main-content ul.news-list
+  margin-top: 10px
+  margin-bottom: 50px
+
+.navbar-shadow
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
+
+#js-scroll-trigger
+  position: fixed
+  right: 50px
+  bottom: 50px
+
+.news-list .news-item .news-thumb img
+  width: 100%
+
+div.drop-languages
+  background-color: #fff !important
+  z-index: 2
+
+.social-btn
+  color: #ffffff
+
+.facebook-bg
+  background-color: #3b5999
+
+.twitter-bg
+  background-color: #55acee
+
+.google-plus-bg
+  background-color: #dd4b39
+
+.primary-bg
+  background-color: #1E87F0
+
+.black-bg
+  background-color: #222222
+
+.social-btn.primary-bg:hover
+  color: #1E87F0
+
+.social-btn.black-bg:hover
+  color: #222222
+
+.social-btn.facebook-bg:hover
+  color: #3b5999
+
+.social-btn.twitter-bg:hover
+  color: #55acee
+
+.social-btn.google-plus-bg:hover
+  color: #dd4b39
