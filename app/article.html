@@ -178,6 +178,17 @@
                     Մխիթարյանը մեկնարկային կազմում է
                     Մխիթարյանը մեկնարկային կազմում
                 </div>
+
+
+                <!-- This is the modal with the outside close button -->
+                <div id="modal-close-outside" uk-modal>
+                    <div class="uk-modal-dialog uk-modal-body">
+                        <button class="uk-modal-close-outside" type="button" uk-close></button>
+                        <h2 class="uk-modal-title">Հավելված</h2>
+                        <p>Ծանոթացեք նորություններին Հավելվածի միջոցվ</p>
+                        <a href="market://details?id=am.timenews.app&amp;hl=ru&amp;utm_campaign=webtop&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Գտեք այստեղ՝ Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/hy_badge_web_generic.png" width="100%"></a>
+                    </div>
+                </div>
             </div>
             <div class="uk-width-1-4@s">
                 <div style="z-index: 1;" uk-sticky="bottom: true;offset: 100">
@@ -230,5 +241,52 @@
         </div>
     </div>
 </div>
+<script>
+    function setCookie(name, value, options) {
+        options = options || {};
+        var expires = options.expires;
+        if (typeof expires == "number" && expires) {
+            var d = new Date();
+            d.setTime(d.getTime() + expires * 1000);
+            expires = options.expires = d;
+        }
+        if (expires && expires.toUTCString) {
+            options.expires = expires.toUTCString();
+        }
+        value = encodeURIComponent(value);
+        var updatedCookie = name + "=" + value;
+
+        for (var propName in options) {
+            updatedCookie += "; " + propName;
+            var propValue = options[propName];
+            if (propValue !== true) {
+                updatedCookie += "=" + propValue;
+            }
+        }
+        document.cookie = updatedCookie;
+    }
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1; //&&
+
+
+    var modal = UIkit.modal("#modal-close-outside");
+
+    if(isAndroid) {
+        if(getCookie("showAppModal") !== "no"){
+            modal.show();
+            setCookie("showAppModal", "no", {expires:10800,path: "/" });
+        }
+
+    }else{
+        console.log("chandroid")
+    }
+</script>
 </body>
 </html>
